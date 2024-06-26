@@ -1,12 +1,19 @@
 package com.caminhas.tasklist
 
+import android.app.Activity
 import android.os.Bundle
+import android.view.LayoutInflater
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
+
+    private val amb : ActivityMainBinding by lazy {
+        ActivityMainBinding.inflate(LayoutInflater)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -17,5 +24,10 @@ class MainActivity : AppCompatActivity() {
             insets
         }
     }
+
+    amb.addBt.onClickListener
+
+
+
 }
 

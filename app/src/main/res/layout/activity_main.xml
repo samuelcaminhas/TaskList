@@ -7,47 +7,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-    <TextView
-    android:id="@+id/TaskListTV"
-    android:layout_height="wrap_content"
-    android:layout_width="match_parent"
-    android:text="TaskList"
-    android:textAlignment="center"
-    android:textSize="20pt"
-    />
-    <TextView
-        android:id="@+id/taskTV"
+    <LinearLayout
+        android:id="@+id/TaskLL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Insira sua tarefa:"
-        app:layout_constraintTop_toBottomOf="@id/TaskListTV"
-        android:textSize="7pt"
-        android:textAlignment="center"
-    />
-    <EditText
-        android:id="@+id/taskET"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/taskTV"
-    />
+        <TextView
+            android:id="@+id/TaskListTV"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="TaskList"
+            android:textAlignment="center"
+            android:textSize="20pt"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/TaskListTV"
+            android:text="Suas tasks:"
+            android:textAlignment="center"
+            />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/AddBT"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/taskET"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="Adicionar tarefa"
-        />
-    <Button
-        android:id="@+id/CompleteBT"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/AddBT"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="Marcar como concluído"
-        />
+
 
   </androidx.constraintlayout.widget.ConstraintLayout>
