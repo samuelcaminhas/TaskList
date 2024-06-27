@@ -88,3 +88,4 @@ class TaskDatabaseHelper(context: Context) : SQLiteOpenHelper (context, DATABASE
     }
 
 }
+data class Task(val id: Int, val name: String, val completed: Boolean)
