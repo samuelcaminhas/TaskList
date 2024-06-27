@@ -10,9 +10,7 @@ import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
 
-    private val amb : ActivityMainBinding by lazy {
-        ActivityMainBinding.inflate(LayoutInflater)
-    }
+    private lateinit TaskDatabaseHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,7 +23,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    amb.addBt.onClickListener
 
 
 
