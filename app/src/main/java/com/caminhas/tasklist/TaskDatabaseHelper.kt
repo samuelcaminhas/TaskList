@@ -27,7 +27,7 @@ class TaskDatabaseHelper(context: Context) : SQLiteOpenHelper (context, DATABASE
         db.execSQL(createTable)
     }
 
-    ooverride fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
+    override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         db.execSQL("DROP TABLE IF EXISTS $TABLE_TASKS")
         onCreate(db)
     }
@@ -47,16 +47,16 @@ class TaskDatabaseHelper(context: Context) : SQLiteOpenHelper (context, DATABASE
         return db.query(TABLE_TASKS, null, null, null, null, null, null)
     }
 
-    fun getTaskById(id: Int): Task{
+    fun getTaskById(id: Int): Task {
         val db = this.readableDatabase
         val cursor = db.query(
-            TABLE_TASK,
+            TABLE_TASKS,
             arrayOf(COLUMN_ID, COLUMN_NAME, COLUMN_COMPLETED),
-            "%$COLUMN_ID = ?",
+            "$COLUMN_ID = ?",
             arrayOf(id.toString()),
             null,
             null,
-            null,
+            null
         )
         cursor?.moveToFirst()
         val task = Task(
